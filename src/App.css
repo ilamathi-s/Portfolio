@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ul li{
+  @apply px-3;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-style{
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: rgb(242, 225, 186);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-styles{
+  font-size: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navigation{
+  @apply fixed top-12 left-0 bg-neutral-500 w-full h-1/4;
 }
-
-.App-link {
-  color: #61dafb;
+.navigation li{
+  @apply w-full text-center border-b-2;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html{
+  scroll-behavior: smooth;
+}
+.bg-all{
+  background: rgb(242, 225, 186);
+}  
+.border{
+  border-bottom: 2px;
+  border-color: rgb(253, 49, 4);
+}
+a{
+  transition: color 0.3s ease;
+}
+.border-animate{
+  transition: width 0.5s ease;
+  height: 4px;
+  background-color:#fd3104;
+  left:0;
+  width: 0;
+  bottom: 0;
+}
+.border-animate.visible{
+  width: 170px;
+}
+.border-card{
+  border-radius: 20px;
 }
